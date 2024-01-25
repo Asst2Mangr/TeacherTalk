@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1044961324923",
+    "project_id": "teachertalk-8ce9d",
+    "storage_bucket": "teachertalk-8ce9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044961324923:android:d0064686ae021a1ee057de",
+        "android_client_info": {
+          "package_name": "com.example.teachertalk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJb3UFMBSFN4SGTST5yeEkKC5jCdzpgVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
