@@ -49,6 +49,7 @@
 
         <EditText
             android:id="@+id/inputName"
+
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="20sp"
@@ -59,7 +60,7 @@
             android:inputType="text"
             android:paddingStart="16sp"
             android:paddingEnd="13sp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/black"
             android:textSize="15sp"/>
         <EditText
             android:id="@+id/inputEmail"
@@ -73,7 +74,7 @@
             android:inputType="textEmailSubject"
             android:paddingStart="16sp"
             android:paddingEnd="13sp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/black"
             android:textSize="15sp"/>
         <EditText
             android:id="@+id/inputPassword"
@@ -87,7 +88,7 @@
             android:inputType="textPassword"
             android:paddingStart="16sp"
             android:paddingEnd="13sp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/black"
             android:textSize="15sp"/>
         <EditText
             android:id="@+id/inputConfirmPassword"
@@ -101,7 +102,7 @@
             android:inputType="textPassword"
             android:paddingStart="16sp"
             android:paddingEnd="13sp"
-            android:textColor="@color/primary_text"
+            android:textColor="@color/black"
             android:textSize="15sp"/>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSignUp"
