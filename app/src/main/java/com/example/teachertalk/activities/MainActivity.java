@@ -1,9 +1,10 @@
-package com.example.teachertalk;
+package com.example.teachertalk.activities;
 
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.teachertalk.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 

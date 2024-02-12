@@ -104,16 +104,34 @@
             android:paddingEnd="13sp"
             android:textColor="@color/black"
             android:textSize="15sp"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonSignUp"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50sp"
-            android:layout_marginTop="16dp"
-            android:text="@string/sign_up"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:cornerRadius="8sp"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="8sp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:visibility="invisible">
+
+            </ProgressBar>
+
+        </FrameLayout>
+
+
         <TextView
             android:id="@+id/textSignin"
             android:layout_width="wrap_content"
