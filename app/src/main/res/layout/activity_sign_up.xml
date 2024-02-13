@@ -26,6 +26,7 @@
             android:textStyle="bold"/>
 
         <FrameLayout
+            android:id="@+id/layoutImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -38,6 +39,7 @@
                 android:scaleType="centerCrop"/>
             
             <TextView
+                android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
