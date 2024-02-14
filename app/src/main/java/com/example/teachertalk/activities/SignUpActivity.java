@@ -1,7 +1,6 @@
 package com.example.teachertalk.activities;
 
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,7 +15,7 @@ import android.view.View;
 import android.widget.Toast;
 import android.util.Base64;
 
-import com.example.teachertalk.R;
+
 import com.example.teachertalk.databinding.ActivitySignUpBinding;
 import com.example.teachertalk.utilities.Constants;
 import com.google.firebase.Firebase;
@@ -31,11 +30,13 @@ import java.util.HashMap;
 public class SignUpActivity extends AppCompatActivity {
     private ActivitySignUpBinding binding;
     private String encodedImage;
+    private PreferenceManager preferenceManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        preferenceManager = new PreferenceManager(getApplicationContext());
         setListeners();
     }
     private void setListeners () {
@@ -67,10 +68,18 @@ public class SignUpActivity extends AppCompatActivity {
         database.collection(Constants.KEY_COLLECTION_USERS)
                 .add(user)
                 .addOnSuccessListener(documentReference -> {
-
+                    loading(false);
+                    preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
+                    preferenceManager.putString(Constants.KEY_USER_ID, documentReference.getId());
+                    preferenceManager.putString(Constants.KEY_NAME, binding.inputName.getText().toString());
+                    preferenceManager.putString(Constants.KEY_IMAGE, encodedImage);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
                 })
                 .addOnFailureListener(exception ->{
-
+                    loading(false);
+                    showToast(exception.getMessage());
                 });
     }
 
