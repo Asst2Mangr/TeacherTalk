@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.teachertalk.activities.SigninActivity;
+import com.example.teachertalk.activities.UsersActivity;
 import com.example.teachertalk.databinding.FragmentHomeBinding;
 import com.example.teachertalk.utilities.Constants;
 import com.example.teachertalk.utilities.PreferenceManager;
@@ -45,6 +46,8 @@ public class HomeFragment extends Fragment {
     }
     private void setListeners(){
         binding.imageSignOut.setOnClickListener(v -> signOut());
+        binding.fabNewChat.setOnClickListener(v->
+                startActivity(new Intent(getContext(), UsersActivity.class)));
     }
     private void loadUserDetails(){
         binding.textName.setText(preferenceManager.getString(Constants.KEY_NAME));
@@ -67,7 +70,6 @@ public class HomeFragment extends Fragment {
                         preferenceManager.getString(Constants.KEY_USER_ID)
                 );
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
-                .addOnSuccessListener(unused -> showToast("Token updated successfully"))
                 .addOnFailureListener(e-> showToast("Unable to update token"));
 
     }
