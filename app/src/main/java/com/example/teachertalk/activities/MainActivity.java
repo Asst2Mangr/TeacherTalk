@@ -1,10 +1,16 @@
 package com.example.teachertalk.activities;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
 import android.view.Menu;
 
 import com.example.teachertalk.R;
+import com.example.teachertalk.databinding.FragmentHomeBinding;
+import com.example.teachertalk.utilities.Constants;
+import com.example.teachertalk.utilities.PreferenceManager;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

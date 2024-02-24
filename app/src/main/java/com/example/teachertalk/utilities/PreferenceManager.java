@@ -1,4 +1,4 @@
-package com.example.teachertalk.activities;
+package com.example.teachertalk.utilities;
 
 import android.content.Context;
 import android.content.SharedPreferences;

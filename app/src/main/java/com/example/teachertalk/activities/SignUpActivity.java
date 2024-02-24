@@ -18,7 +18,7 @@ import android.util.Base64;
 
 import com.example.teachertalk.databinding.ActivitySignUpBinding;
 import com.example.teachertalk.utilities.Constants;
-import com.google.firebase.Firebase;
+import com.example.teachertalk.utilities.PreferenceManager;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.io.output.ByteArrayOutputStream;
 import com.google.firebase.firestore.FirebaseFirestore;
 

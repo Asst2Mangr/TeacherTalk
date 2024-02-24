@@ -8,17 +8,11 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.teachertalk.R;
 import com.example.teachertalk.databinding.ActivitySigninBinding;
 import com.example.teachertalk.utilities.Constants;
-import com.google.firebase.Firebase;
-import com.google.firebase.FirebaseApiNotAvailableException;
+import com.example.teachertalk.utilities.PreferenceManager;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import org.w3c.dom.Document;
-
-import java.util.HashMap;
 
 public class SigninActivity extends AppCompatActivity {
 
