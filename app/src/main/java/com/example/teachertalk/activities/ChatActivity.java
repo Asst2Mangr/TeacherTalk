@@ -6,13 +6,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.teachertalk.R;
+import com.example.teachertalk.databinding.ActivityChatBinding;
+import com.example.teachertalk.models.User;
+import com.example.teachertalk.utilities.Constants;
 
 public class ChatActivity extends AppCompatActivity {
+    private ActivityChatBinding binding;
+    private User receiverUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_chat);
+        binding = ActivityChatBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setListeners();
+        loadReceiverDetails();
     }
+
+    private void loadReceiverDetails(){
+        receiverUser = (User) getIntent().getSerializableExtra(Constants.KEY_USER);
+        binding.textName.setText(receiverUser.name);
+    }
+
+    private void setListeners() {
+        binding.imageBack.setOnClickListener(v -> onBackPressed());
+    }
+
 }

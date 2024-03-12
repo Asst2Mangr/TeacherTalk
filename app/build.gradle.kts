@@ -72,6 +72,7 @@ dependencies {
     implementation ("com.intuit.ssp:ssp-android:1.0.5")
     implementation ("com.intuit.sdp:sdp-android:1.0.5")
     implementation ("com.makeramen:roundedimageview:2.3.0")
+    implementation ("androidx.appcompat:appcompat:1.6.0-alpha04")
     //firebase
     implementation("com.google.firebase:firebase-messaging:23.4.0")
     implementation("com.google.firebase:firebase-firestore:24.10.2")
