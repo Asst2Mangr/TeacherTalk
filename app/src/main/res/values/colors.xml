@@ -11,4 +11,5 @@
     <color name="input_background">#ECECECEC</color>
     <color name="icon_background">#20FFFFFF</color>
     <color name="received_msg_background">#46523E</color>
+    <color name="green">#008000</color>
 </resources>

@@ -1,17 +1,9 @@
 package com.example.teachertalk.activities;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Base64;
-import android.view.View;
-import android.view.Menu;
 
+import android.view.Menu;
 import com.example.teachertalk.R;
-import com.example.teachertalk.databinding.FragmentHomeBinding;
-import com.example.teachertalk.utilities.Constants;
-import com.example.teachertalk.utilities.PreferenceManager;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -19,11 +11,11 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.teachertalk.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends BaseActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -32,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityMainBinding.inflate(getLayoutInflater());
+
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
@@ -49,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override
@@ -64,4 +57,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
