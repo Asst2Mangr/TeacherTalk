@@ -9,11 +9,14 @@ import android.view.View;
 import com.example.teachertalk.adapters.UsersAdapter;
 import com.example.teachertalk.databinding.ActivityUsersBinding;
 import com.example.teachertalk.listeners.UserListener;
+
 import com.example.teachertalk.models.User;
 import com.example.teachertalk.utilities.Constants;
 import com.example.teachertalk.utilities.PreferenceManager;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +24,8 @@ import java.util.List;
 public class UsersActivity extends AppCompatActivity implements UserListener {
     private ActivityUsersBinding binding;
     private PreferenceManager preferenceManager;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
         setListeners();
         getUsers();
     }
+
 
     private void setListeners(){
         binding.imageBack.setOnClickListener(v->onBackPressed());
@@ -92,4 +98,6 @@ public class UsersActivity extends AppCompatActivity implements UserListener {
         startActivity(intent);
         finish();
     }
+    
+
 }

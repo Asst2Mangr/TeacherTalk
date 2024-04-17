@@ -17,10 +17,14 @@ import android.util.Base64;
 
 
 import com.example.teachertalk.databinding.ActivitySignUpBinding;
+import com.example.teachertalk.models.ChatMessage;
 import com.example.teachertalk.utilities.Constants;
 import com.example.teachertalk.utilities.PreferenceManager;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.io.output.ByteArrayOutputStream;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -56,6 +60,7 @@ public class SignUpActivity extends AppCompatActivity {
     private void showToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+
 
     private void signUp(){
         loading(true);
